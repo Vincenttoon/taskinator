@@ -133,16 +133,16 @@ var taskButtonHandler = function(event) {
     // delete button was clicked
     else if (targetEl.matches(".delete-btn")) {
         var taskId = targetEl.getAttribute("data-task-id");
+        deleteTask(taskId);
     }
 };
 
 var deleteTask = function(taskId) {
-    console.log(taskId);
-    // find task list element with taskId value and remove it
     var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
     taskSelected.remove();
-  };
+};
 
+  
 // edit task function
 var editTask = function(taskId) {
     // get task list item
